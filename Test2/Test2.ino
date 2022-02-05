@@ -12,7 +12,7 @@ char buf2[300];
 
 const int PttPin = 4;
 
-#define NUMSAMP 60*6*2
+#define NUMSAMP (60*6*2)
 int sample[NUMSAMP];
 #define NEXTTIME 500
 
@@ -30,7 +30,7 @@ void setup()
   //u8x8.setFont(u8x8_font_chroma48medium8_r);
   u8x8.setFont(u8x8_font_inb46_4x8_r);
   
-  nt = millis() + 1000;
+  nt = millis() + NEXTTIME;
   Serial.begin(115200);
 
   pinMode(PttPin, INPUT);
